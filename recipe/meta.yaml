@@ -1,7 +1,7 @@
 {% set name = "drms" %}
-{% set version = "0.5.2" %}
+{% set version = "0.5.3" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "05147964834b1f24730c824addc6c2160dba0953beda26234113740ace3378fa" %}
+{% set hash_value = "6bc67df8338dcc691ae68a1bcfc5a233e91eed87f1bf5aaf45e0ca6247fd0cd2" %}
 
 package:
   name: '{{ name|lower }}'
