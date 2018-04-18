@@ -1,7 +1,7 @@
 About drms
 ==========
 
-Home: https://github.com/kbg/drms
+Home: https://github.com/sunpy/drms
 
 Package license: MIT
 
@@ -11,7 +11,7 @@ Summary: Access HMI, AIA and MDI data with Python
 
 The ``drms`` module provides an easy-to-use interface for accessing HMI, AIA and MDI data with Python.
 It uses the publicly accessible `JSOC <http://jsoc.stanford.edu/>`_ DRMS server by default, but can also\nbe used with local `NetDRMS <http://jsoc.stanford.edu/netdrms/>`_ sites.
-More information, including a detailed tutorial is available on `Read the Docs <http://drms.readthedocs.io/>`_.
+More information, including a detailed tutorial is available on `Read the Docs <http://docs.sunpy.org/projects/drms/>`_.
 
 
 Current build status
