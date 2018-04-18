@@ -1,7 +1,7 @@
 {% set name = "drms" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.4" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "6bc67df8338dcc691ae68a1bcfc5a233e91eed87f1bf5aaf45e0ca6247fd0cd2" %}
+{% set hash_value = "61a0cbdf095aa1f59efd65a6b2012152ddc22050b3f200d56f430f5c26970bdb" %}
 
 package:
   name: '{{ name|lower }}'
@@ -32,7 +32,7 @@ test:
     - drms
 
 about:
-  home: https://github.com/kbg/drms
+  home: https://github.com/sunpy/drms
   license: MIT
   license_family: MIT
   license_file: 'LICENSE.txt'
@@ -40,9 +40,9 @@ about:
   description: |
     The ``drms`` module provides an easy-to-use interface for accessing HMI, AIA and MDI data with Python.
     It uses the publicly accessible `JSOC <http://jsoc.stanford.edu/>`_ DRMS server by default, but can also\nbe used with local `NetDRMS <http://jsoc.stanford.edu/netdrms/>`_ sites.
-    More information, including a detailed tutorial is available on `Read the Docs <http://drms.readthedocs.io/>`_.
-  doc_url: http://drms.readthedocs.io/
-  dev_url: https://github.com/kbg/drms
+    More information, including a detailed tutorial is available on `Read the Docs <http://docs.sunpy.org/projects/drms/>`_.
+  doc_url: http://docs.sunpy.org/projects/drms/
+  dev_url: https://github.com/sunpy/drms
 
 extra:
   recipe-maintainers:
