@@ -1,7 +1,7 @@
 {% set name = "drms" %}
-{% set version = "0.5.5" %}
+{% set version = "0.5.6" %}
 {% set hash_type = "sha256" %}
-{% set hash_value = "d76eb5110bc161b32942d7d58d09c987c23e655c0128e80ed085693c14517cd0" %}
+{% set hash_value = "95cac0e14532893a44eeab8e329ddb76150e6848153d8cb1e4e08ba55569e6af" %}
 
 package:
   name: '{{ name|lower }}'
@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - numpy >=1.9.0
-    - pandas >=0.14.1
+    - pandas >=0.15.0
     - six >=1.8.0
 
 test:
