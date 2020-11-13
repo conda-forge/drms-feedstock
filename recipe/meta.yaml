@@ -12,18 +12,17 @@ source:
 
 build:
   number: 0
-  script: python setup.py install  --single-version-externally-managed --record=record.txt
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv'
   noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - setuptools
   run:
-    - python
-    - numpy >=1.9.0
-    - pandas >=0.15.0
-    - six >=1.8.0
+    - python >=3.7
+    - numpy
+    - pandas
 
 test:
   imports:
@@ -31,9 +30,8 @@ test:
 
 about:
   home: https://github.com/sunpy/drms
-  license: MIT
-  license_family: MIT
-  license_file: LICENSE.txt
+  license: BSD-2-Clause
+  license_file: LICENSE.rst
   summary: Access HMI, AIA and MDI data with Python
   description: |
     The ``drms`` module provides an easy-to-use interface for accessing HMI, AIA and MDI data with Python.
