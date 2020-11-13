@@ -1,31 +1,29 @@
 {% set name = "drms" %}
-{% set version = "0.5.7" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "ab3ec6d072b1980f77dadf3b2cb0fe56c648eaf927ea381f606b4db66d4cbff2" %}
+{% set version = "0.6.0" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  fn: '{{ name }}-{{ version }}.tar.gz'
+  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  '{{ hash_type }}': '{{ hash_value }}'
+  sha256: 74efb903f42647ea536de0c5aea4f9a81efe027c95055ec4e72ef62479a04c89
 
 build:
   number: 0
-  script: python setup.py install  --single-version-externally-managed --record=record.txt
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv'
   noarch: python
 
 requirements:
-  build:
-    - python
+  host:
+    - python >=3.7
     - setuptools
+    - pip
   run:
-    - python
-    - numpy >=1.9.0
-    - pandas >=0.15.0
-    - six >=1.8.0
+    - python >=3.7
+    - numpy
+    - pandas
 
 test:
   imports:
@@ -33,9 +31,8 @@ test:
 
 about:
   home: https://github.com/sunpy/drms
-  license: MIT
-  license_family: MIT
-  license_file: 'LICENSE.txt'
+  license: BSD-2-Clause
+  license_file: LICENSE.rst
   summary: Access HMI, AIA and MDI data with Python
   description: |
     The ``drms`` module provides an easy-to-use interface for accessing HMI, AIA and MDI data with Python.
