@@ -3,7 +3,7 @@ About drms
 
 Home: https://github.com/sunpy/drms
 
-Package license: MIT
+Package license: BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/drms-feedstock/blob/master/LICENSE.txt)
 
