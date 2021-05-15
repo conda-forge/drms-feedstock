@@ -11,25 +11,28 @@ source:
   sha256: fc5a78ea4390959834e71fe460d700d02cab1dabb73aa79ae702cefaee8ec207
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
+  number: 2
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.7
-    - setuptools
     - pip
-  run:
     - python >=3.7
-    - numpy
+    - setuptools_scm
+  run:
+    - {{ pin_compatible('numpy') }}
     - pandas
+    - python >=3.7
 
 test:
+  requires:
+    - setuptools
   imports:
     - drms
   commands:
-    - python -c "from pkg_resources import get_distribution; get_distribution("drms")"
+    - python -c "from pkg_resources import get_distribution; print(get_distribution('drms'))"
+    - python -c "from importlib.metadata import version; print(version('drms'))"
 
 about:
   home: https://github.com/sunpy/drms
