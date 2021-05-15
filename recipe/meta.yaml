@@ -17,13 +17,13 @@ build:
 
 requirements:
   host:
-    - python >=3.7
-    - setuptools
     - pip
-  run:
     - python >=3.7
-    - numpy
+    - setuptools_scm
+  run:
+    - {{ pin_compatible('numpy') }}
     - pandas
+    - python >=3.7
 
 test:
   requires:
