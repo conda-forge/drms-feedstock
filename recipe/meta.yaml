@@ -29,7 +29,7 @@ test:
   imports:
     - drms
   commands:
-    - python -c "from pkg_resources import get_distribution; get_distribution("drms")"
+    - python -c "from pkg_resources import get_distribution; get_distribution('drms')"
 
 about:
   home: https://github.com/sunpy/drms
