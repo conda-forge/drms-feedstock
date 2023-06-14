@@ -1,5 +1,5 @@
 {% set name = "drms" %}
-{% set version = "0.6.3" %}
+{% set version = "0.6.4" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 72b3d5a3b00b12b656bcd72c689fc1b816b45647c2b19f82f76f71e241191cac
+  sha256: 7c7dbdd1046186096486432ba701d492a56e62f67ac3f303218a3d574aae7956
 
 build:
   number: 0
@@ -24,6 +24,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - pandas
     - python >=3.7
+    - packaging
 
 test:
   requires:
