@@ -153,7 +153,6 @@ Feedstock Maintainers
 =====================
 
 * [@Cadair](https://github.com/Cadair/)
-* [@SolarDrew](https://github.com/SolarDrew/)
-* [@kbg](https://github.com/kbg/)
 * [@nabobalis](https://github.com/nabobalis/)
+* [@wtbarnes](https://github.com/wtbarnes/)
 
