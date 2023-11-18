@@ -1,5 +1,5 @@
 {% set name = "drms" %}
-{% set version = "0.6.4" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7c7dbdd1046186096486432ba701d492a56e62f67ac3f303218a3d574aae7956
+  sha256: 0475a8ca3618c5b970e48dc00ea5d353301d9ed2d4dbcba4fd0bf7666d1aac6a
 
 build:
   number: 0
@@ -18,12 +18,12 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.9
     - setuptools_scm
   run:
     - {{ pin_compatible('numpy') }}
     - pandas
-    - python >=3.7
+    - python >=3.9
     - packaging
 
 test:
@@ -49,7 +49,6 @@ about:
 
 extra:
   recipe-maintainers:
-    - SolarDrew
-    - kbg
+    - wtbarnes
     - Cadair
     - nabobalis
