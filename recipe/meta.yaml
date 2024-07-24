@@ -29,11 +29,14 @@ requirements:
 test:
   requires:
     - setuptools
+    - pip
+    - pytest-astropy
   imports:
     - drms
   commands:
     - python -c "from pkg_resources import get_distribution; print(get_distribution('drms'))"
-    - python -c "from importlib.metadata import version; print(version('drms'))"
+    - python -c "from importlib.metadata import version; print(version('drms'))
+    - pytest --pyargs drms --remote-data=none
 
 about:
   home: https://github.com/sunpy/drms
