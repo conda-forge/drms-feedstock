@@ -1,5 +1,5 @@
 {% set name = "drms" %}
-{% set version = "0.7.1" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d95b40191c743a761d0132bf9e03617df9900e365f10b61e4d33c275f9070007
+  sha256: 2e01eeee64e088bde7da555a3a1a697567d088cd021642beeb3e9e0642f198a6
 
 build:
   number: 0
