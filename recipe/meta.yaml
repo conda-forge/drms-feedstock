@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "drms" %}
 {% set version = "0.8.0" %}
 
@@ -7,23 +8,23 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2e01eeee64e088bde7da555a3a1a697567d088cd021642beeb3e9e0642f198a6
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   noarch: python
 
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools_scm
   run:
     - numpy
     - pandas
-    - python >=3.10
+    - python >={{ python_min }}
     - packaging
 
 test:
@@ -31,6 +32,7 @@ test:
     - setuptools
     - pip
     - pytest-astropy
+    - python {{ python_min }}
   imports:
     - drms
   commands:
